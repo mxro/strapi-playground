@@ -9,7 +9,7 @@ const client = new ApolloClient({
 
 const Home = () => <>
   <h1>Hello world!</h1>
-  <ApolloProvider client={client} ><QuoteList></QuoteList></ApolloProvider>;
+  <ApolloProvider client={client} ><QuoteList></QuoteList></ApolloProvider>
 </>;
 
 

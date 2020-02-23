@@ -10,12 +10,10 @@ const QUOTES = gql`
     }
   }
 `;
-const QuoteList: any = (
-  req) => {
+const QuoteList: any = () => {
   const { loading, error, data } = useQuery(QUOTES);
 
   if (error) {
-    console.log(error);
     return "Error loading quotes";
   }
 
@@ -23,9 +21,12 @@ const QuoteList: any = (
   const { quotes } = data;
 
 
-  return quotes.map(res => {
-    return res.Author;
-  });
+  return <ul>{
+    quotes.map(({ Author, id }) => {
+      return <li key={id} >{Author}</li>;
+    })
+  }
+  </ul>
 };
 
 
