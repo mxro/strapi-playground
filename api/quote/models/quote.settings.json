@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "quotes",
+  "info": {
+    "name": "Quote"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Quote": {
+      "type": "richtext"
+    },
+    "tags": {
+      "collection": "tag"
+    },
+    "Author": {
+      "type": "string"
+    }
+  }
+}
