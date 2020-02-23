@@ -9,13 +9,13 @@
     "timestamps": true
   },
   "attributes": {
-    "Quote": {
-      "type": "richtext"
+    "Author": {
+      "type": "string"
     },
     "tags": {
       "collection": "tag"
     },
-    "Author": {
+    "Quote": {
       "type": "string"
     }
   }
