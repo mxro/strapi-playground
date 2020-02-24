@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from "apollo-boost";
 
@@ -10,16 +9,13 @@ const QUOTES = gql`
     }
   }
 `;
+
 const QuoteList: any = () => {
   const { loading, error, data } = useQuery(QUOTES);
-
-  if (error) {
-    return "Error loading quotes";
-  }
-
+  if (error) return "Error loading quotes";
   if (loading) return "Loading ...";
-  const { quotes } = data;
 
+  const { quotes } = data;
 
   return <ul>{
     quotes.map(({ Author, id }) => {
@@ -28,6 +24,5 @@ const QuoteList: any = () => {
   }
   </ul>
 };
-
 
 export default QuoteList;
